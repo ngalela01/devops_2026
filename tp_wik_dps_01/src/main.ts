@@ -4,9 +4,8 @@ import { AppModule } from './app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  const port = Number(process.env.PING_LISTEN_PORT ?? process.env.PORT ?? 8080);
+  const port = Number(process.env.PING_LISTEN_PORT) || 3000;
 
   await app.listen(port);
 }
-bootstrap();
-console.log('http://localhost:8080/ping');
+void bootstrap();

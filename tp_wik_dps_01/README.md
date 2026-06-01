@@ -31,10 +31,10 @@ pnpm install
 Le port d'ecoute peut etre configure dans le fichier `.env` :
 
 ```env
-PING_LISTEN_PORT=8080
+PING_LISTEN_PORT=3000
 ```
 
-Si `PING_LISTEN_PORT` n'est pas defini, l'application utilise `PORT`, puis `8080` par defaut.
+Si `PING_LISTEN_PORT` n'est pas defini, l'application utilise le port `3000` par defaut.
 
 ## Lancement
 
@@ -53,7 +53,7 @@ pnpm start
 L'application est ensuite accessible sur :
 
 ```text
-http://localhost:8080
+http://localhost:3000
 ```
 
 ## Routes
@@ -65,14 +65,14 @@ Retourne les headers de la requete.
 Exemple :
 
 ```bash
-curl http://localhost:8080/ping
+curl http://localhost:3000/ping
 ```
 
 Exemple de reponse :
 
 ```json
 {
-  "host": "localhost:8080",
+  "host": "localhost:3000",
   "user-agent": "curl/8.0.0",
   "accept": "*/*"
 }
@@ -85,9 +85,9 @@ Toutes les autres routes retournent une erreur `404` sans body.
 Exemples :
 
 ```bash
-curl -i http://localhost:8080/
-curl -i http://localhost:8080/test
-curl -i -X POST http://localhost:8080/ping
+curl -i http://localhost:3000/
+curl -i http://localhost:3000/test
+curl -i -X POST http://localhost:3000/ping
 ```
 
 Resultat attendu :
@@ -102,12 +102,6 @@ Compiler le projet :
 
 ```bash
 pnpm build
-```
-
-Lancer les tests :
-
-```bash
-pnpm test
 ```
 
 Lancer le lint :
