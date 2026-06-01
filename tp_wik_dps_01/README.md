@@ -19,6 +19,8 @@ PING_LISTEN_PORT=3000
 INSTANCE_ID=local-dev
 ```
 
+Un fichier `.env.example` est present comme exemple.
+
 Si `PING_LISTEN_PORT` n'est pas defini, le serveur ecoute sur le port `3000`.
 
 ## Lancer le projet
@@ -101,7 +103,7 @@ curl http://localhost:3000/stats
 curl http://localhost:3001/stats
 ```
 
-Les compteurs ne seront pas forcement identiques, car chaque instance garde son compteur en memoire. Pour avoir un compteur commun, il faudrait utiliser un stockage partage comme Redis ou une base de donnees.
+Les compteurs ne seront pas forcement identiques, car chaque instance garde son compteur en memoire. Pour avoir un compteur commun, il faudrait utiliser un stockage partage comme une base de donnees.
 
 ## Commandes utiles
 
